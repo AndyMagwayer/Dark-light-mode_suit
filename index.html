@@ -1,13 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
+    <h1>Dark/Light Mode</h1>
+    <button class="toggle-btn">
+        <span class="circle"><i class="icon fas fa-sun"></i></span>
+    </button>
+    <p>When we talk about affordable suits, we usually mean suits costing less than $500.
+
+        While we all love a bargain, nobody wants to end up looking cheap.
+
+        Any outfit is an investment, and I’m here to help you find a good quality suit. Yet, still affordable.
+        To Look Professional
+        A suit sends a clear message to clients and colleagues: you are serious about your work. Many men wear suits to
+        look professional.
+
+        A well-cut suit can make you look taller, slimmer, and more professional, and, with the right accessories, your
+        outfit can take on a whole new level of sophistication.
+
+        If you’re unsure about what type of suit to buy, consult a tailor or other professional clothing specialist.
+        They will be able to help you find the perfect fit for your body and style.
+
+        2. To Gain Respect
+        When you put on a suit, you are signaling to the world that you are a professional. A good suit can make you
+        look taller, more confident, and more competent.
+
+        When you wear a suit, it is important to make sure that the fit is perfect. A good tailor can help you find the
+        right size and the right style for your body.
+
+        When you wear a suit, it is also important to make sure that your accessories match. You might want to consider
+        wearing a tie and a pocket square.</p>
+
 </body>
+<script>
+    document.querySelector(".toggle-btn").addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            document.querySelector(".icon").classList.remove('fa-sun');
+            document.querySelector(".icon").classList.add('fa-moon');
+        } else {
+            document.querySelector(".icon").classList.remove('fa-moon');
+            document.querySelector(".icon").classList.add('fa-sun');
+        }
+    });
+</script>
+
 </html>

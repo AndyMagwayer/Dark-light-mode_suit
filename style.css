@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    border-style: border-box;
+    font-family: 'Monserrat';
+}
+
+body {
+    background-image: url(CdyQi8YVAAEWewS.jpg);
+    color: #fff;
+    transition: .2s ease-in-out;
+    text-align: center;
+}
+
+body.dark-mode {
+    background-image: url(wp3376833.jpg);
+    color:#fff  ;
+}
+
+h1 {
+    margin: 40px;
+}
+
+p {
+    font-weight: 600;
+    font-weight: bolder ;
+    margin: 10px 0;
+    line-height: 25px;
+    text-align: justify;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+toggle-btn {
+    position: relative;
+    width: 140px;
+    height: 60px;
+    background: url("light.png") no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+    border: none;
+    transition: .4s linear;
+    cursor: pointer;
+}
+
+.dark-mode .toggle-btn {
+    background: url(dark.png) no-repeat center;
+    background-size: cover;
+}
+
+.circle {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-color: rgba(225, 255, 255, .6);
+
+}
+
+.circle::before,
+.circle::after {
+    content: "";
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    animation: waves 1s linear infinite;
+}
+
+
+.dark-mode .circle::before,
+.dark-mode .circle::after {
+    border: 1px solid #333;
+}
+
+.circle::after {
+    animation-delay: .5s;
+}
+
+@keyframes waves {
+    to {
+        transform: scale(1.4);
+        opacity: .3;
+    }
+}
+
+.toggle-btn i {
+    font-size: 22px;
+    line-height: 44px;
+    transition: .5s linear;
+}
+
+.dark-mode .toggle-btn i {
+    transform: rotate(360deg);
+}
+
+
+.fa-sun {
+    color: #d4ac0d;
+}
+
+.fa-moon {
+    color: #eaf2f8;
+
+}
